@@ -4,7 +4,7 @@ import { Client as FaunaClient } from "faunadb"
 import { FaunaAdapter } from "@next-auth/fauna-adapter"
 
 const client = new FaunaClient({
-    secret: "fnAEbNThpUAAQP1RO5DuFleZw3sFM6Niw28MFI7t",
+    secret: process.env.FAUNA_SECRET,
     domain: 'db.us.fauna.com',
     scheme: 'https',
 })
